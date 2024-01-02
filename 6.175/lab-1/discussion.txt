@@ -1,0 +1,4 @@
+1. 4 gates, 4 * 5 = 20 gates
+2. 5 * 8 = 40 gates, (3 * 4-bit full-adder) 5 * 4 * 3 + (1 4-bit multiplexer) 4 * 4 + (1 1-bit multiplexer) 4 = 80
+3. 8A, 4A + 4M
+4. 3 hours
