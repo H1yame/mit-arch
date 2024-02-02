@@ -1,0 +1,4 @@
+What is the source of the performance gap between your two elastic implementations (when it is using the class fifo and when it is using your own fifo)?
+the currency of fifo
+Assume you are given a black box module that performs a 10-stage algorithm. You can not look at its internal implementation, but you can test this module by giving it data and looking at the output of the module. You have been told that it is implemented as one of the structures covered in this lab, but you do not know which one. How can you tell if it is inelastic or if it is elastic?
+if the time gap between two data output is always a constant, it's inelastic, otherwise it's elastic.c
