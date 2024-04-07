@@ -1,0 +1,24 @@
+1. notFull reads "full", 
+enq read enqPos, deqPos and write enqPos, full, empty, data[enqPos],
+notEmpty reads empty,
+deq read deqPos, enqPos and write deqPos, full, empty,
+first read data[deqPos], deqPos,
+clear write enqPos, deqPos, full, empty
+
+2.
+|          | notFull | enq  | notEmpty | deq  | first | clear |
+| -------- | ------- | ---- | -------- | ---- | ----- | ----- |
+| notFull  | CF      | <    | CF       | <    | CF    | <     |
+| enq      | >       | C    | >        | C    | >     | C     |
+| notEmpty | CF      | <    | CF       | <    | CF    | <     |
+| deq      | >       | C    | >        | C    | >     | C     |
+| first    | CF      | <    | CF       | <    | CF    | <     |
+| clear    | >       | C    | >        | C    | >     | C     |
+
+read happens before write
+
+3. 
+enq and deq not ever conflict.
+
+4.
+use ehr, clear method writes port 2 and enq, deq writes port 1. so enq & deq happens before clear.

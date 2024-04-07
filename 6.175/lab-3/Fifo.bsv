@@ -88,7 +88,7 @@ module mkCFFifo( Fifo#(2, t) ) provisos (Bits#(t, tSz));
 endmodule
 
 module mkCF3Fifo(Fifo#(3,t)) provisos (Bits#(t, tSz));
-    FIFO#(t) bsfif <-  mkSizedFIFO(3);
+    FIFO#(t) bsfif <- mkSizedFIFO(3);
     method Action enq( t x);
         bsfif.enq(x);
     endmethod
